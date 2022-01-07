@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SGUIE-Net Project Page</title>
+    <!-- Bootstrap -->
+    <link href="./SGUIE-Net_files/bootstrap-4.0.0.css" rel="stylesheet">
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.1036.0" data-gr-ext-installed="">
+    <div id="page_container">
+        <header>
+            <div class="jumbotron">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+
+                            <h1 class="text-center"> SGUIE-Net: Semantic Attention Guided Underwater Image Enhancement with Multi-Scale Perception</h1>
+                            <p class="text-center">&nbsp;</p>
+                            <h5 class="text-center"><a href="https://trentqq.github.io/">Qi Qi<sup>1</sup></a>, Kunqian Li<sup>2</sup><sup>*</sup>, Haiyong Zheng<sup>1</sup>, Xiang Gao<sup>2</sup>, Guojia Hou<sup>3</sup>, Kun Sun<sup>4</sup></h5>
+                            <p class="text-center"><sup>1</sup>College of Information Science and Engineering, Ocean University of China</p>
+                            <p class="text-center"><sup>1</sup>College of Engineering, Ocean University of China</p>
+                            <p class="text-center"><sup>1</sup>College of Computer Science and Technology, Qingdao University</p>
+                            <p class="text-center"><sup>1</sup>School of Computer Science, China University of Geosciences</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section>
+
+
+            <div class="container">
+                <p>&nbsp;</p>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 text-center">
+                        <h2>Abstract</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 text-center  offset-xl-0 col-xl-12">
+                        <p style="text-align:justify"><em>Due to the wavelength-dependent light attenuation and scattering, underwater images usually suﬀer from color distortion and blurred details. However, due to the limited number of paired underwater images with undistorted images as reference, training deep enhancement models for diverse degradation types is quite diﬃcult. To boost the performance of data-driven approaches, it is essential to establish more eﬀective learning mechanisms that mine richer supervised information from limited training sample resources. In this paper, we propose a novel underwater image enhancement network, called SGUIENet, in which we introduce semantic information as high-level guidance across diﬀerent images that share common semantic regions. Accordingly, we propose semantic region-wise enhancement module to perceive the degradation of diﬀerent semantic regions from multiple scales and feed it back to the global attention features extracted from its original scale. This strategy helps to achieve robust and visually pleasant enhancements to diﬀerent semantic objects, which should thanks to the guidance of semantic information for diﬀerentiated enhancement. More importantly, for those degradation types that are not common in the training sample distribution, the guidance connects them with the already well-learned types according to their semantic relevance. Extensive experiments on the publicly available datasets and our proposed dataset demonstrated the impressive performance of SGUIE-Net.</em></p>
+                        <p class="text-left">&nbsp;</p>
+                        <h5 class="text-center">
+                            <a href="">[Paper]</a>
+                            <a href="https://github.com/trentqq/SGUIE-Net">[Code]</a>
+                            <a href="./SGUIE-Net_files/SGUIE-Net_Suppy.pdf">[Supplementary]</a>
+                            <a href="https://drive.google.com/drive/folders/1gA3Ic7yOSbHd3w214-AgMI9UleAt4bRM?usp=sharing">[DataSet]</a>
+                        </h5>
+                    </div>
+                </div>
+
+                <hr>
+                <div class="container">
+                    <p>&nbsp;</p>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 text-center">
+                            <h2>Highlights</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 text-center  offset-xl-0 col-xl-12">
+                            <p class="text-left"><em>
+                                    1. We introduce semantic association into underwater image enhancement task and propose a semantic attention guided underwater image enhancement network called SGUIE-Net. It learns features incorporating high-level semantic information to build enhancement guidance for those degradation types that are uncommon in the training sample distribution but semantically relevant with the well-learned types. <br>
+
+                                    2. We design SGUIE-Net as a deep enhancement network with multi-scale perception, whose main branch and semantic branch are fused to complement each other. The main branch is used to provide end-to-end enhancement while preserving image texture details in original scale, and the semantic branch is used to complement the semantically guided features with multi-scale perception. <br>
+
+                                    3. We establish a new benchmark, namely SUIM-E, by extending the Segmentation of Underwater IMagery (SUIM) dataset [9] with corresponding enhancement reference images. Then, comprehensive experiments, evaluations and analyses conducted on multiple commonly used datasets verify the good performance of the proposed SGUIE-Net.<br>
+
+                                    4. Extensive experiments have show that the U-shape transformer we proposed combined
+                                    with the multi-color space loss function achieves state-of-the-art performance on
+                                    several public datasets and our dataset.<br>
+                                </em></p>
+                            <p class="text-left">&nbsp;</p>
+                        </div>
+                    </div>
+
+
+                    <hr>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 text-left">
+                            <h2>Overall Architecture </h2>
+                            <p>&nbsp;</p>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 text-center col-xl-12"> <img src="./SGUIE-Net_files/images/SGUIE-Net_1.png" width="900" alt="">
+                            <p>&nbsp;</p>
+                            <p class="text-left">Fig 1. Architecture of SGUIE-Net. Our SGUIE-Net contains two enhancement branches for multi-scale perception, the main (top) branch works on the original input scale through the cascaded attention-aware enhancement module which
+                                contains multiple residual groups (RGs), and additionally embeds a semantic guided feature extraction and fusion module (SGF) to achieve enhanced multi-scale features. The bottom branch works on the semantic level, learning
+                                multi-scale semantic association features with encoder-decoder structure. It builds semantic enhancement guidance through the semantic region-wise enhancement module (SRM) and then feeds them back to the main branch. The
+                                details of the FAB, RG and SGF modules are shown in Figure 2.</p>
+                            <p>&nbsp;</p>
+                            <p>&nbsp;</p>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 text-center col-xl-12"> <img src="./SGUIE-Net_files/images/SGUIE-Net_2.png" width="900" alt="">
+                            <p>&nbsp;</p>
+                            <p class="text-left">Fig 2. The architecture of the basic blocks of our SGUIE-Net. (a) Feature attention block (FAB) consists of cascaded channel attention (CA) and pixel attention (PA) module. (b) illustrates the RG module formed by multiple FABs
+                                with shorted connections. (c) The SFG module takes the global attention features obtained by the head of the main branch, semantic mask and the semantic region-based attention features as the inputs. Then, the SFG module
+                                extracts the local parts of the global attention features according to the semantic guidance for the later fusion on the semantic region-based attention features.</p>
+                            <p>&nbsp;</p>
+                            <p>&nbsp;</p>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 text-left">
+                            <h2>Results </h2>
+                            <p>&nbsp;</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 text-center col-xl-12"> <img src="./SGUIE-Net_files/images/SUIM-E.png" width="900" alt="">
+                            <p>&nbsp;</p>
+                            <p class="text-center">Fig. 3. Visual comparisons on underwater images from SUIM-E test set.</p>
+                            <p>&nbsp;</p>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 text-center col-xl-12"> <img src="./SGUIE-Net_files/images/UIEB.png" width="900" alt="">
+                            <p>&nbsp;</p>
+                            <p class="text-center">Fig 4. Visual comparisons on underwater images from UIEB test set.</p>
+                            <p>&nbsp;</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 text-center col-xl-12"> <img src="./SGUIE-Net_files/images/UIEB_60.png" width="900" alt="">
+                            <p>&nbsp;</p>
+                            <p class="text-center">Fig 5. Visual comparisons on underwater images from UIEB challenging test set.</p>
+                            <p>&nbsp;</p>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 text-center col-xl-12"> <img src="./SGUIE-Net_files/images/RUIE.png" width="900" alt="">
+                            <p>&nbsp;</p>
+                            <p class="text-center">Fig 6. Visual comparisons on underwater images from RUIE dataset.</p>
+                            <p>&nbsp;</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 text-center col-xl-12"> <img src="./SGUIE-Net_files/images/EUVP.png" width="900" alt="">
+                            <p>&nbsp;</p>
+                            <p class="text-center">Fig 7. Visual comparisons on underwater images from EUVP dataset.</p>
+                            <p>&nbsp;</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 text-center col-xl-12"> <img src="./SGUIE-Net_files/images/SQUID.png" width="900" alt="">
+                            <p>&nbsp;</p>
+                            <p class="text-center">Fig 8. Visual comparisons on challenging underwater images from SQUID.</p>
+                            <p>&nbsp;</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 text-center col-xl-12"> <img src="./SGUIE-Net_files/images/ColorCheck7.png" width="900" alt="">
+                            <p>&nbsp;</p>
+                            <p class="text-center">Fig 9. Visual comparisons on images of Color-Checker7. The two images are taken by the Fuji Z33 (ﬁrst row) and Olympus T6000 (second row), respectively.</p>
+                            <p>&nbsp;</p>
+                        </div>
+                    </div>
+
+
+
+                    <hr>
+
+
+                    <div class="row">
+                        <div class="col-lg-12 mb-4 mt-2 text-left">
+                            <h2>Demo Video</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 text-center">
+                        <video controls="controls" width="900" height="576" jm_neat="1344787457">
+                            <source src="./SGUIE-Net_files/images/supplementary_video.mp4" type="video/mp4">
+                        </video>
+                        <p>&nbsp;</p>
+                    </div>
+                    <hr>
+
+
+
+                    <div class="row"> </div>
+                </div>
+                <div class="jumbotron">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 text-left">
+                            <h2>Citation</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 text-left">
+
+                        <p><span style="color:#000000;font-family:&#39;Courier New&#39;;font-size:15px;">
+                                
+                            </span></p>
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="./SGUIE-Net_files/jquery-3.2.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./SGUIE-Net_files/popper.min.js"></script>
+    <script src="./SGUIE-Net_files/bootstrap-4.0.0.js"></script>
+
+
+</body>
+
+</html>
