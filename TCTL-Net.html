@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TCTL-Net Project Page</title>
+    <!-- Bootstrap -->
+    <link href="./SGUIE-Net_files/bootstrap-4.0.0.css" rel="stylesheet">
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.1036.0" data-gr-ext-installed="">
+    <div id="page_container">
+        <header>
+            <div class="jumbotron">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+
+                            <h1 class="text-center"> TCTL-Net: Template-free Color Transfer Learning for Self-Attention Driven Underwater Image Enhancement</h1>
+                            <p class="text-center">&nbsp;</p>
+                            <h5 class="text-center">Kunqian Li<sup>1</sup>, Hongtao Fan<sup>1</sup>, Chi Yan<sup>1</sup>, Qi Qi<sup>2</sup><sup>*</sup>, Kun Sun<sup>3</sup>, Q. M. Jonathan Wu<sup>4</sup> </h5>
+                            <p class="text-center"><sup>1</sup>College of Engineering, Ocean University of China</p>
+                            <p class="text-center"><sup>2</sup>School of Information and Control Engineering, Qingdao University of Technology</p>
+                            <p class="text-center"><sup>3</sup>School of Computer Science, China University of Geosciences</p>
+                            <p class="text-center"><sup>4</sup>Department of Electrical and Computer Engineering, University of Windsor</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section>
+
+
+            <div class="container">
+                <p>&nbsp;</p>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 text-center">
+                        <h2>Abstract</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 text-center  offset-xl-0 col-xl-12">
+                        <p style="text-align:justify"><em></em></p>
+                        <p class="text-left">&nbsp;</p>
+                        <h5 class="text-center">
+                            <!-- <a href="https://arxiv.org/abs/2201.02832">[Paper]</a>
+                            <a href="https://github.com/trentqq/SGUIE-Net_Simple">[Code]</a>
+                            <a href="./SGUIE-Net_files/SGUIE-Net_Suppy.pdf">[Supplementary]</a>
+                            <a href="https://drive.google.com/drive/folders/1gA3Ic7yOSbHd3w214-AgMI9UleAt4bRM?usp=sharing">[DataSet]</a> -->
+                        </h5>
+                    </div>
+                </div>
+
+                <hr>
+                <div class="container">
+                    <p>&nbsp;</p>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 text-center">
+                            <h2>Highlights</h2>
+                            <ol>
+                                <li>
+                                    <p class="text-left">We re-formulate color transfer and incorporate it into a deep learning framework for underwater image enhancement, which does not require any candidate templates in the test stage (i.e., the target or reference images in image color transfer).</p>
+                                </li>
+                                <li>
+                                    <p class="text-left">We introduce self-attention for color degradation perception and L* (lightness) channel fusion for joint attention guidance, which can provide diﬀerentiated enhancements for regions with diverse and uneven degradation.</p>
+                                </li>
+                                <li>
+                                    <p class="text-left">Unlike traditional end-to-end deep enhancement networks, which can hardly support high-resolution images due to the high computational and memory cost, TCTLNet overcomes this obstacle thanks to the fact the transfer parameter prediction can be performed on their lowresolution versions as an alternative.</p>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+
+                    <hr>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 text-left">
+                            <h2>Overall Architecture </h2>
+                            <p>&nbsp;</p>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 text-center col-xl-12"> <img src="./TCTL-Net_files/images/TCTL-Net.png" width="900" alt="">
+                            <p>&nbsp;</p>
+                            <p class="text-left">Fig 1. The overall architecture of TCTL-Net. It is consists of one main branch for the prediction of base transfer parameter matrix and three lateral branches for the prediction of biased transfer parameter matrices of channels L*, a* and b*, respectively.</p>
+                            <p>&nbsp;</p>
+                            <p>&nbsp;</p>
+                        </div>
+                        <!-- <div class="col-lg-12 col-md-12 col-sm-12 text-center col-xl-12"> <img src="./SGUIE-Net_files/images/SGUIE-Net_2.png" width="900" alt="">
+                            <p>&nbsp;</p>
+                            <p class="text-left">Fig 2. The architectures of the basic blocks of our SGUIE-Net. (a) Feature attention block (FAB) consists of cascaded channel attention (CA) and pixel attention (PA) module. (b) illustrates the RG module formed by multiple
+                                FABs with shorted connections. (c) The SFG module takes the global intermediate residual feature <i><b>F<sub>g</sub></b></i>, semantic mask <i><b>M</b></i> and the region-wise residual enhancement feature <i><b>F<sub>k</sub></b></i>                                as the inputs. Then, the SFG module extracts the local parts of <i><b>F<sub>g</sub></b></i> according to the semantic guidance of <i><b>M</b></i> for the later fusion with <i><b>F<sub>k</sub></b></i>.</p>
+                            <p>&nbsp;</p>
+                            <p>&nbsp;</p>
+                        </div> -->
+                    </div>
+
+                    <hr>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 text-left">
+                            <h2>Results </h2>
+                            <p>&nbsp;</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 text-center col-xl-12"> <img src="./TCTL-Net_files/images/3D.png" width="900" alt="">
+                            <p>&nbsp;</p>
+                            <p class="text-center">Fig. 3. The 3D models reconstructed from raw underwater images and enhanced underwater images using TCTL-Net. (a) is an example of the raw image from the <a href="http://csms.haifa.ac.il/profiles/tTreibitz/datasets/sea_thru/index.html">Sea-thru dataset</a>; (b) and (c) are the local perspectives of 3D models reconstructed using the raw underwater images like (a); (d) is the enhancement of (a) generated by the proposed TCTL-Net; (e) and (f) are the local perspectives of 3D models reconstructed using the enhanced underwater images of TCTL-Net. The size of the images used for 3D reconstruction is 1962 × 1310..</p>
+                            <p>&nbsp;</p>
+                        </div>
+                    </div>
+
+                    <!-- <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 text-center col-xl-12"> <img src="./SGUIE-Net_files/images/UIEB60-RUIE-EUVP.png" width="900" alt="">
+                            <p>&nbsp;</p>
+                            <p class="text-center">Fig 4. Visual comparisons on underwater images from UIEB Challenging set (the top two rows), RUIE (the middle two rows) and EUVP (the bottom two rows) datasets. The perceptual score is marked on the upper right corner of each
+                                enhancement.
+                            </p>
+                            <p>&nbsp;</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 text-center col-xl-12"> <img src="./SGUIE-Net_files/images/SQUID.png" width="900" alt="">
+                            <p>&nbsp;</p>
+                            <p class="text-center">Fig 5. Visual comparisons on challenging underwater images from SQUID. The perceptual score is marked on the upper right corner of each enhancement.</p>
+                            <p>&nbsp;</p>
+                        </div>
+                    </div> -->
+
+                    <hr>
+
+
+                    <!-- <div class="row">
+                        <div class="col-lg-12 mb-4 mt-2 text-left">
+                            <h2>Demo Video</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 text-center">
+                        <video controls="controls" width="900" height="576" jm_neat="1344787457">
+                            <source src="./SGUIE-Net_files/images/supplementary_video.mp4" type="video/mp4">
+                        </video>
+                        <p>&nbsp;</p>
+                    </div>
+                    <hr> -->
+
+
+
+                    <div class="row"> </div>
+                </div>
+                <!-- <div class="jumbotron">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 text-left">
+                            <h2>Citation</h2>
+                            <br>
+
+                            <pre>@article{qi2022sguienet,
+    title={SGUIE-Net: Semantic Attention Guided Underwater Image Enhancement with Multi-Scale Perception},
+    author={Qi Qi and Kunqian Li and Haiyong Zheng and Xiang Gao and Guojia Hou and Kun Sun},
+    journal={arXiv preprint arXiv:2201.02832},
+    year={2022}
+    }
+                            </pre>
+
+
+                        </div>
+                    </div>
+                    <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 text-left">
+
+                        <p><span style="color:#000000;font-family:&#39;Courier New&#39;;font-size:15px;">
+                                
+                            </span></p>
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                    </div> -->
+                </div> -->
+
+            </div>
+        </section>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="./SGUIE-Net_files/jquery-3.2.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./SGUIE-Net_files/popper.min.js"></script>
+    <script src="./SGUIE-Net_files/bootstrap-4.0.0.js"></script>
+
+
+</body>
+
+</html>
