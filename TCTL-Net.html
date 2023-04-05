@@ -46,10 +46,18 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 text-center  offset-xl-0 col-xl-12">
                         <p style="text-align:justify"><em>Vision is an important source of information for underwater observations, but underwater images usually suﬀer severe visual degradation due to the complex underwater imaging environment and wavelength-dependent absorption eﬀects. There is an urgent need for underwater image enhancement techniques to improve the visual quality of underwater images. Due to the scarcity of high-quality paired training samples, underwater image enhancement based on deep learning has never achieved similar success as other vision tasks. Instead of learning complicated distortion-to-clear mappings with deep networks, we design a template-free color transfer learning framework for predicting transfer parameters, which are more easily captured and described. Besides, we add attention-driven modules to learn diﬀerentiated transfer for more ﬂexible and robust enhancement. We verify the eﬀectiveness of our method on multiple publicly available datasets and show its eﬃciency in enhancing high-resolution images.</em></p>
                         <p class="text-left">&nbsp;</p>
+
+                        <!-- <div class="row">
+                            <div class="col-xs-6 col-md-4 myTest"><img src="static/images/supplement_ico.png" width="55" alt="Supplementary Material" /></div>
+                            <div class="col-xs-6 col-md-4 myTest"><img src="static/images/GitHub.png" width="80" height="25" alt="code" /></div>
+                            <div class="col-xs-6 col-md-4 myTest">.col-xs-6 .col-md-4</div>
+                        </div> -->
                         <h5 class="text-center">
                             <!-- <a href="https://arxiv.org/abs/2201.02832">[Paper]</a> -->
-                            
-                            <a href="https://github.com/trentqq/TCTL-Net"><img src="static/images/GitHub.png" width="80" alt="code"/></a>
+
+                            <a href="#"><img src="static/images/supplement_ico.png" width="55" alt="Supplementary Material" /></a>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="https://github.com/trentqq/TCTL-Net"><img src="static/images/GitHub.png" width="80" alt="code" /></a>
                             <!-- <a href="./SGUIE-Net_files/SGUIE-Net_Suppy.pdf">[Supplementary]</a> -->
                             <!-- <a href="https://drive.google.com/drive/folders/1gA3Ic7yOSbHd3w214-AgMI9UleAt4bRM?usp=sharing">[DataSet]</a> -->
                         </h5>
@@ -64,13 +72,15 @@
                             <h2>Highlights</h2>
                             <ol>
                                 <li>
-                                    <p class="text-left">We re-formulate color transfer and incorporate it into a deep learning framework for underwater image enhancement, which does not require any candidate templates in the test stage (i.e., the target or reference images in image color transfer).</p>
+                                    <p class="text-left">We re-formulate color transfer and incorporate it into a deep learning framework for underwater image enhancement, which does not require any candidate templates in the test stage (i.e., the target or reference images
+                                        in image color transfer).</p>
                                 </li>
                                 <li>
                                     <p class="text-left">We introduce self-attention for color degradation perception and L* (lightness) channel fusion for joint attention guidance, which can provide diﬀerentiated enhancements for regions with diverse and uneven degradation.</p>
                                 </li>
                                 <li>
-                                    <p class="text-left">Unlike traditional end-to-end deep enhancement networks, which can hardly support high-resolution images due to the high computational and memory cost, TCTLNet overcomes this obstacle thanks to the fact the transfer parameter prediction can be performed on their lowresolution versions as an alternative.</p>
+                                    <p class="text-left">Unlike traditional end-to-end deep enhancement networks, which can hardly support high-resolution images due to the high computational and memory cost, TCTLNet overcomes this obstacle thanks to the fact the transfer
+                                        parameter prediction can be performed on their lowresolution versions as an alternative.</p>
                                 </li>
                             </ol>
                         </div>
@@ -89,11 +99,12 @@
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-sm-12 text-center col-xl-12"> <img src="./TCTL-Net_files/images/TCTL-Net.png" width="900" alt="">
                             <p>&nbsp;</p>
-                            <p class="text-left">Fig 1. The overall architecture of TCTL-Net. It is consists of one main branch for the prediction of base transfer parameter matrix and three lateral branches for the prediction of biased transfer parameter matrices of channels L*, a* and b*, respectively.</p>
+                            <p class="text-left">Fig 1. The overall architecture of TCTL-Net. It is consists of one main branch for the prediction of base transfer parameter matrix and three lateral branches for the prediction of biased transfer parameter matrices of channels
+                                L*, a* and b*, respectively.</p>
                             <p>&nbsp;</p>
                             <p>&nbsp;</p>
                         </div>
-                        
+
                     </div>
 
                     <hr>
@@ -106,7 +117,8 @@
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-sm-12 text-center col-xl-12"> <img src="./TCTL-Net_files/images/SQUID.png" width="900" alt="">
                             <p>&nbsp;</p>
-                            <p class="text-center">Fig. 2. The visual comparison of enhancements on the images of the SQUID dataset. From left to right, (a) the raw images of SQUID from four dive sites, their enhancements with (b) Water-Net, (c) Ucolor, (d) UICoE-Net, (e) LCL-Net and (f) the proposed TCTL-Net are presented, respectively.</p>
+                            <p class="text-center">Fig. 2. The visual comparison of enhancements on the images of the SQUID dataset. From left to right, (a) the raw images of SQUID from four dive sites, their enhancements with (b) Water-Net, (c) Ucolor, (d) UICoE-Net, (e) LCL-Net
+                                and (f) the proposed TCTL-Net are presented, respectively.</p>
                             <p>&nbsp;</p>
                         </div>
                     </div>
@@ -114,7 +126,9 @@
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-sm-12 text-center col-xl-12"> <img src="./TCTL-Net_files/images/3D.png" width="900" alt="">
                             <p>&nbsp;</p>
-                            <p class="text-center">Fig. 3. The 3D models reconstructed from raw underwater images and enhanced underwater images using TCTL-Net. (a) is an example of the raw image from the <a href="http://csms.haifa.ac.il/profiles/tTreibitz/datasets/sea_thru/index.html">Sea-thru dataset</a>; (b) and (c) are the local perspectives of 3D models reconstructed using the raw underwater images like (a); (d) is the enhancement of (a) generated by the proposed TCTL-Net; (e) and (f) are the local perspectives of 3D models reconstructed using the enhanced underwater images of TCTL-Net. The size of the images used for 3D reconstruction is 1962 × 1310.</p>
+                            <p class="text-center">Fig. 3. The 3D models reconstructed from raw underwater images and enhanced underwater images using TCTL-Net. (a) is an example of the raw image from the <a href="http://csms.haifa.ac.il/profiles/tTreibitz/datasets/sea_thru/index.html">Sea-thru dataset</a>;
+                                (b) and (c) are the local perspectives of 3D models reconstructed using the raw underwater images like (a); (d) is the enhancement of (a) generated by the proposed TCTL-Net; (e) and (f) are the local perspectives of 3D
+                                models reconstructed using the enhanced underwater images of TCTL-Net. The size of the images used for 3D reconstruction is 1962 × 1310.</p>
                             <p>&nbsp;</p>
                         </div>
                     </div>
@@ -182,10 +196,10 @@
                         <p>&nbsp;</p>
                         <p>&nbsp;</p>
                     </div> -->
-                </div> -->
+            </div> -->
 
-            </div>
-        </section>
+    </div>
+    </section>
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
