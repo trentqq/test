@@ -18,9 +18,9 @@
                     <div class="row">
                         <div class="col-12">
 
-                            <h1 class="text-center"> TCTL-Net: Template-free Color Transfer Learning for Self-Attention Driven Underwater Image Enhancement</h1>
+                            <h1 class="text-center"> <a href="https://ieeexplore.ieee.org/document/10298280" style="color: black">TCTL-Net: Template-free Color Transfer Learning for Self-Attention Driven Underwater Image Enhancement</a></h1>
                             <p class="text-center">&nbsp;</p>
-                            <h5 class="text-center">Kunqian Li<sup>1</sup>, Hongtao Fan<sup>1</sup>, Chi Yan<sup>1</sup>, Qi Qi<sup>2</sup><sup>*</sup>, Kun Sun<sup>3</sup>, Q. M. Jonathan Wu<sup>4</sup> </h5>
+                            <h5 class="text-center">Kunqian Li<sup>1</sup>, Hongtao Fan<sup>1</sup>, Qi Qi<sup>2</sup><sup>*</sup>, Chi Yan<sup>1</sup>, Kun Sun<sup>3</sup>, Q. M. Jonathan Wu<sup>4</sup> </h5>
                             <p class="text-center"><sup>1</sup>College of Engineering, Ocean University of China</p>
                             <p class="text-center"><sup>2</sup>School of Information and Control Engineering, Qingdao University of Technology</p>
                             <p class="text-center"><sup>3</sup>School of Computer Science, China University of Geosciences</p>
@@ -44,7 +44,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 text-center  offset-xl-0 col-xl-12">
-                        <p style="text-align:justify"><em>Vision is an important source of information for underwater observations, but underwater images usually suﬀer severe visual degradation due to the complex underwater imaging environment and wavelength-dependent absorption eﬀects. There is an urgent need for underwater image enhancement techniques to improve the visual quality of underwater images. Due to the scarcity of high-quality paired training samples, underwater image enhancement based on deep learning has never achieved similar success as other vision tasks. Instead of learning complicated distortion-to-clear mappings with deep networks, we design a template-free color transfer learning framework for predicting transfer parameters, which are more easily captured and described. Besides, we add attention-driven modules to learn diﬀerentiated transfer for more ﬂexible and robust enhancement. We verify the eﬀectiveness of our method on multiple publicly available datasets and show its eﬃciency in enhancing high-resolution images.</em></p>
+                        <p style="text-align:justify"><em>&nbsp;&nbsp;&nbsp;&nbsp;Vision is an important source of information for underwater observations, but underwater images commonly suffer severe visual degradation due to the complexity of the underwater imaging environment and wavelength-dependent absorption effects. There is an urgent need for underwater image enhancement techniques to improve the visual quality of underwater images. Due to the scarcity of high-quality paired training samples, underwater image enhancement based on deep learning has never achieved success similar to other vision tasks. Instead of learning complicated distortion-to-clear mappings with deep networks, we design a template-free color transfer learning framework for predicting transfer parameters, which are more easily captured and described. In addition, we add attention-driven modules to learn differentiated transfer parameters for more flexible and robust enhancement. We verify the effectiveness of our method on multiple publicly available datasets and show its efficiency in enhancing high-resolution images.</em></p>
                         <p class="text-left">&nbsp;</p>
 
                         <!-- <div class="row">
@@ -55,11 +55,10 @@
                         <h5 class="text-center">
                             <!-- <a href="https://arxiv.org/abs/2201.02832">[Paper]</a> -->
 
-                            <a href="#"><img src="static/images/supplement_ico.png" width="55" alt="Supplementary Material" /></a>
+                            <a href="./TCTL-Net_files/TCTL-Net_supplement.pdf"><img src="static/images/supplement_ico.png" width="55" alt="Supplementary Material" /></a>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <a href="https://github.com/trentqq/TCTL-Net"><img src="static/images/GitHub.png" width="80" alt="code" /></a>
-                            <!-- <a href="./SGUIE-Net_files/SGUIE-Net_Suppy.pdf">[Supplementary]</a> -->
-                            <!-- <a href="https://drive.google.com/drive/folders/1gA3Ic7yOSbHd3w214-AgMI9UleAt4bRM?usp=sharing">[DataSet]</a> -->
+
                         </h5>
                     </div>
                 </div>
@@ -72,15 +71,17 @@
                             <h2>Highlights</h2>
                             <ol>
                                 <li>
-                                    <p class="text-left">We re-formulate color transfer and incorporate it into a deep learning framework for underwater image enhancement, which does not require any candidate templates in the test stage (i.e., the target or reference images
+                                    <p style="text-align:justify">We re-formulate color transfer and incorporate it into a deep-learning framework for underwater image enhancement, which does not require any candidate templates in the test stage (i.e., the target or reference images
                                         in image color transfer).</p>
                                 </li>
                                 <li>
-                                    <p class="text-left">We introduce self-attention for color degradation perception and L* (lightness) channel fusion for joint attention guidance, which can provide diﬀerentiated enhancements for regions with diverse and uneven degradation.</p>
+                                    <p style="text-align:justify">We propose to use self-attention and introduce lightness (L*) channel fusion for joint attention guidance to address color degradation perception. By further dividing the transfer parameter prediction into basic ones
+                                        for the whole channel and biased parameter matrices for local regions, our approach enables differentiated enhancements for regions with diverse and uneven degradation.
+                                    </p>
                                 </li>
                                 <li>
-                                    <p class="text-left">Unlike traditional end-to-end deep enhancement networks, which can hardly support high-resolution images due to the high computational and memory cost, TCTLNet overcomes this obstacle thanks to the fact the transfer
-                                        parameter prediction can be performed on their lowresolution versions as an alternative.</p>
+                                    <p style="text-align:justify">Unlike traditional deep UIE models, which have to sacrifice output resolution to overcome computational power and space barriers, TCTL-Net has better compatibility with high-resolution images. By using basic transfer
+                                        parameters as robust global guidance, TCTL-Net only needs to predict low-resolution biased transfer parameter matrices in order to generate region-wise differentiated enhancement without sacrificing output resolution.</p>
                                 </li>
                             </ol>
                         </div>
@@ -99,8 +100,9 @@
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-sm-12 text-center col-xl-12"> <img src="./TCTL-Net_files/images/TCTL-Net.png" width="900" alt="">
                             <p>&nbsp;</p>
-                            <p class="text-left">Fig 1. The overall architecture of TCTL-Net. It is consists of one main branch for the prediction of base transfer parameter matrix and three lateral branches for the prediction of biased transfer parameter matrices of channels
-                                L*, a* and b*, respectively.</p>
+                            <p style="text-align:justify">Fig 1. The overall architecture of TCTL-Net. TCTL-Net is designed as an end-to-end training framework that unifies the prediction of color transfer parameters and in-network color transfer-based enhancement into a single network.
+                                The parameter prediction modules consist of one primary branch for predicting the basic transfer parameter matrix and three lateral branches for predicting biased transfer parameter matrices of channels L*, a*, and b* respectively.
+                                The in-network color transfer module uses the predicted results to provide pixel-wise differentiated enhancement.</p>
                             <p>&nbsp;</p>
                             <p>&nbsp;</p>
                         </div>
@@ -117,7 +119,7 @@
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-sm-12 text-center col-xl-12"> <img src="./TCTL-Net_files/images/SQUID.png" width="900" alt="">
                             <p>&nbsp;</p>
-                            <p class="text-center">Fig. 2. The visual comparison of enhancements on the images of the SQUID dataset. From left to right, (a) the raw images of SQUID from four dive sites, their enhancements with (b) Water-Net, (c) Ucolor, (d) UICoE-Net, (e) LCL-Net
+                            <p style="text-align:justify">Fig. 2. The visual comparison of enhancements on the images of the SQUID dataset. From left to right, (a) the raw images of SQUID from four dive sites, their enhancements with (b) Water-Net, (c) Ucolor, (d) UICoE-Net, (e) LCL-Net
                                 and (f) the proposed TCTL-Net are presented, respectively.</p>
                             <p>&nbsp;</p>
                         </div>
@@ -126,50 +128,13 @@
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-sm-12 text-center col-xl-12"> <img src="./TCTL-Net_files/images/3D.png" width="900" alt="">
                             <p>&nbsp;</p>
-                            <p class="text-center">Fig. 3. The 3D models reconstructed from raw underwater images and enhanced underwater images using TCTL-Net. (a) is an example of the raw image from the <a href="http://csms.haifa.ac.il/profiles/tTreibitz/datasets/sea_thru/index.html">Sea-thru dataset</a>;
+                            <p style="text-align:justify">Fig. 3. The 3D models reconstructed from raw underwater images and enhanced underwater images using TCTL-Net. (a) is an example of the raw image from the <a href="http://csms.haifa.ac.il/profiles/tTreibitz/datasets/sea_thru/index.html">Sea-thru dataset</a>;
                                 (b) and (c) are the local perspectives of 3D models reconstructed using the raw underwater images like (a); (d) is the enhancement of (a) generated by the proposed TCTL-Net; (e) and (f) are the local perspectives of 3D
                                 models reconstructed using the enhanced underwater images of TCTL-Net. The size of the images used for 3D reconstruction is 1962 × 1310.</p>
                             <p>&nbsp;</p>
                         </div>
                     </div>
-
-                    <!-- <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12 text-center col-xl-12"> <img src="./SGUIE-Net_files/images/UIEB60-RUIE-EUVP.png" width="900" alt="">
-                            <p>&nbsp;</p>
-                            <p class="text-center">Fig 4. Visual comparisons on underwater images from UIEB Challenging set (the top two rows), RUIE (the middle two rows) and EUVP (the bottom two rows) datasets. The perceptual score is marked on the upper right corner of each
-                                enhancement.
-                            </p>
-                            <p>&nbsp;</p>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12 text-center col-xl-12"> <img src="./SGUIE-Net_files/images/SQUID.png" width="900" alt="">
-                            <p>&nbsp;</p>
-                            <p class="text-center">Fig 5. Visual comparisons on challenging underwater images from SQUID. The perceptual score is marked on the upper right corner of each enhancement.</p>
-                            <p>&nbsp;</p>
-                        </div>
-                    </div> -->
-
                     <hr>
-
-
-                    <!-- <div class="row">
-                        <div class="col-lg-12 mb-4 mt-2 text-left">
-                            <h2>Demo Video</h2>
-                        </div>
-                    </div>
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 text-center">
-                        <video controls="controls" width="900" height="576" jm_neat="1344787457">
-                            <source src="./SGUIE-Net_files/images/supplementary_video.mp4" type="video/mp4">
-                        </video>
-                        <p>&nbsp;</p>
-                    </div>
-                    <hr> -->
-
-
-
-                    <div class="row"> </div>
                 </div>
                 <!-- <div class="jumbotron">
                     <div class="row">
@@ -178,28 +143,28 @@
                             <br>
 
                             <pre>@article{qi2022sguienet,
-    title={SGUIE-Net: Semantic Attention Guided Underwater Image Enhancement with Multi-Scale Perception},
-    author={Qi Qi and Kunqian Li and Haiyong Zheng and Xiang Gao and Guojia Hou and Kun Sun},
-    journal={arXiv preprint arXiv:2201.02832},
-    year={2022}
-    }
+                                title={SGUIE-Net: Semantic Attention Guided Underwater Image Enhancement with Multi-Scale Perception},
+                                author={Qi Qi and Kunqian Li and Haiyong Zheng and Xiang Gao and Guojia Hou and Kun Sun},
+                                journal={arXiv preprint arXiv:2201.02832},
+                                year={2022},
+                                }
                             </pre>
 
 
                         </div>
                     </div>
-                    <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 text-left">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 text-left">
 
                         <p><span style="color:#000000;font-family:&#39;Courier New&#39;;font-size:15px;">
                                 
                             </span></p>
                         <p>&nbsp;</p>
                         <p>&nbsp;</p>
-                    </div> -->
-            </div> -->
+                    </div>
+                </div> -->
 
-    </div>
-    </section>
+            </div>
+        </section>
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
